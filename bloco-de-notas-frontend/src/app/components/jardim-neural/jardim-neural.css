@@ -1,0 +1,20 @@
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.8));
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 16px rgba(52, 211, 153, 1));
+  }
+}
+
+.neuron-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
+  transform-origin: center;
+}
+
+.neuron-glow-delayed {
+  animation: pulse-glow 3s infinite ease-in-out 1.5s;
+  transform-origin: center;
+}

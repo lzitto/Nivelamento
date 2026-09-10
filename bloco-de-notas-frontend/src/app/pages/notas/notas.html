@@ -1,6 +1,6 @@
 <div class="min-h-screen bg-[#0B0F17] text-[#F0F6FC] flex flex-col font-sans">
-
-  <!-- BARRA SUPERIOR (HEADER) -->
+  
+  <!-- BARRA SUPERIOR / HEADER -->
   <header class="h-16 border-b border-[#21262D] px-6 flex items-center justify-between bg-[#161B22]/50 backdrop-blur">
     <div class="flex items-center gap-3">
       <div class="p-1.5 bg-[#10B981]/10 rounded-lg text-[#10B981]">
@@ -24,12 +24,12 @@
     </div>
   </header>
 
-  <!-- CORPO PRINCIPAL (GRID) -->
+  <!-- CORPO DA DASHBOARD (GRID) -->
   <div class="flex-1 grid grid-cols-12 gap-6 p-6 max-w-[1600px] w-full mx-auto">
     
-    <!-- COLUNA ESQUERDA: BARRA LATERAL / MENU (2 Colunas) -->
+    <!-- COLUNA 1: MENU LATERAL (Esquerda - 2 Colunas) -->
     <aside class="col-span-12 md:col-span-2 flex flex-col gap-2">
-      <a href="#" class="px-4 py-2.5 rounded-xl bg-[#161B22] border border-[#21262D] text-white text-sm font-medium flex items-center gap-3">
+      <a href="#" class="px-4 py-2.5 rounded-xl bg-[#161B22] border border-[#21262D] text-white text-sm font-medium flex items-center gap-3 shadow-sm">
         📌 <span>Notas</span>
       </a>
       <a href="#" class="px-4 py-2.5 rounded-xl text-[#8B949E] hover:bg-[#161B22] hover:text-white text-sm font-medium transition-all flex items-center gap-3">
@@ -43,58 +43,48 @@
       </a>
     </aside>
 
-    <!-- COLUNA CENTRAL: SACOLA DE NOTAS E EDITOR (6 Colunas) -->
+    <!-- COLUNA 2: SACOLA DE NOTAS + EDITOR (Centro - 6 Colunas) -->
     <main class="col-span-12 md:col-span-6 flex flex-col gap-6">
       
       <!-- Card da Sacola de Notas -->
-      <div class="bg-[#161B22] border border-[#21262D] rounded-2xl p-5">
+      <div class="bg-[#161B22] border border-[#21262D] rounded-2xl p-5 shadow-lg">
         <div class="flex justify-between items-center mb-4">
           <h2 class="font-bold text-lg text-white">Minha Sacola de Notas</h2>
-          <button class="px-3 py-1.5 bg-[#10B981] hover:bg-[#059669] text-[#0B0F17] font-bold text-xs rounded-xl transition-all">
+          <button class="px-3 py-1.5 bg-[#10B981] hover:bg-[#059669] text-[#0B0F17] font-bold text-xs rounded-xl transition-all shadow-md">
             + Nova nota
           </button>
         </div>
 
         <!-- Papeizinhos de Notas -->
-        <div class="grid grid-cols-2 gap-3">
-          <div class="bg-[#EAB308]/10 border border-[#EAB308]/30 p-3 rounded-xl">
-            <h4 class="font-bold text-sm text-[#FDE047]">LEDA - R11 BST</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="bg-[#EAB308]/10 border border-[#EAB308]/30 p-3.5 rounded-xl">
+            <h4 class="font-bold text-sm text-[#FDE047]">LEDA – R11 BST</h4>
             <p class="text-xs text-[#8B949E] mt-1">search, insert, remove...</p>
           </div>
-          <div class="bg-[#EAB308]/10 border border-[#EAB308]/30 p-3 rounded-xl">
+          <div class="bg-[#EAB308]/10 border border-[#EAB308]/30 p-3.5 rounded-xl">
             <h4 class="font-bold text-sm text-[#FDE047]">Angular + TS</h4>
             <p class="text-xs text-[#8B949E] mt-1">service, guards, rotas...</p>
           </div>
         </div>
       </div>
 
-      <!-- Editor de Notas -->
-      <div class="bg-[#161B22] border border-[#21262D] rounded-2xl p-5 flex-1 min-h-[300px]">
-        <h3 class="font-bold text-sm text-white mb-2">Editor Markdown</h3>
-        <textarea class="w-full h-48 bg-[#0B0F17] border border-[#21262D] rounded-xl p-3 text-xs text-emerald-400 font-mono focus:outline-none resize-none" placeholder="# Escreva suas notas aqui..."></textarea>
+      <!-- Editor de Notas Markdown -->
+      <div class="bg-[#161B22] border border-[#21262D] rounded-2xl p-5 flex-1 min-h-[320px] shadow-lg flex flex-col">
+        <h3 class="font-bold text-sm text-white mb-3">Editor Markdown</h3>
+        <textarea 
+          class="w-full flex-1 bg-[#0B0F17] border border-[#21262D] rounded-xl p-4 text-xs text-[#10B981] font-mono focus:outline-none focus:border-[#10B981] transition-all resize-none leading-relaxed" 
+          placeholder="# Escreva suas notas aqui..."></textarea>
       </div>
 
     </main>
 
-    <!-- COLUNA DIREITA: POMODORO + JARDIM NEURAL (4 Colunas) -->
+    <!-- COLUNA 3: PAINEL DIREITO (Direita - 4 Colunas) -->
     <aside class="col-span-12 md:col-span-4 flex flex-col gap-6">
       
-      <!-- Card Pomodoro Placeholder -->
-      <div class="bg-[#161B22] border border-[#21262D] rounded-2xl p-5 text-center">
-        <h3 class="font-bold text-white text-sm mb-2">Pomodoro</h3>
-        <div class="text-3xl font-extrabold text-[#10B981] my-2">25:00</div>
-        <button class="px-4 py-1.5 bg-[#10B981]/20 border border-[#10B981] text-[#10B981] rounded-xl text-xs font-bold hover:bg-[#10B981] hover:text-[#0B0F17] transition-all">
-          Iniciar Foco
-        </button>
-      </div>
-
-      <!-- AQUI ENTRA SEU COMPONENTE DO JARDIM NEURAL! -->
+      <!-- APENAS O COMPONENTE DO JARDIM NEURAL (que já engloba o visual de métricas e Pomodoro) -->
       <app-jardim-neural></app-jardim-neural>
 
     </aside>
 
   </div>
 </div>
-
-<!-- Renderiza as sub-rotas caso altere a navegação -->
-<router-outlet></router-outlet>
